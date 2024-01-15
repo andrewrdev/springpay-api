@@ -1,6 +1,7 @@
 package andrewrdev.SpringPay.models;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import andrewrdev.SpringPay.enums.UserType;
 import jakarta.persistence.Column;
@@ -26,12 +27,19 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     @Column(unique = true)
     private String document;
+
     @Column(unique = true)
     private String email;
+    
     private String password;
     private UserType type;
     private BigDecimal balance;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 }
