@@ -3,12 +3,14 @@ package andrewrdev.SpringPay.models;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import andrewrdev.SpringPay.dtos.UserDTO;
 import andrewrdev.SpringPay.enums.UserType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -39,7 +41,21 @@ public class User {
     private String password;
     private UserType type;
     private BigDecimal balance;
-
+   
     @Column(name = "created_at")
     private LocalDateTime createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
+
+    public User(UserDTO userDTO) {
+        this.name = userDTO.getName();
+        this.document = userDTO.getDocument();
+        this.email = userDTO.getEmail();
+        this.password = userDTO.getPassword();
+        this.type = userDTO.getType();
+        this.balance = userDTO.getBalance();
+    }
 }
