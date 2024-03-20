@@ -39,7 +39,9 @@ Para utilizar o SpringPay API, basta seguir os seguintes passos:
 
 3. Configure o ambiente no application.properties: 
 
-4. Acesse os endpoints do sistema e exemplos de payload
+4. Acesse os endpoints do sistema [Ver Endpoints](./docs/endpoints.md)
+
+5. Acesse os exemplos de payload [Ver Payloads](./docs/payload.md)
 
 ## Contribuições e Feedback 🤝
 
@@ -47,4 +49,4 @@ Contribuições são bem-vindas! Se encontrar problemas, tenha ideias ou queira 
 
 ## Licença 📜
 
-Este projeto é licenciado sob a [GNU General Public License v3.0](LICENSE.md) - veja o arquivo LICENSE.md para detalhes.
+Este projeto é licenciado sob a [GNU General Public License v3.0]() - veja o arquivo LICENSE.md para detalhes.
