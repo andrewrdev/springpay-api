@@ -17,7 +17,7 @@ Insere um novo usuário no sistema
 	"document": "111.111.111-11",
 	"email": "jose@mail.com",
 	"password": "123",
-    "balance": 50,
+        "balance": 50,
 	"userType": "COMMON"
 }
 ```
@@ -28,7 +28,7 @@ Insere um novo usuário no sistema
 	"document": "222.222.222-22",
 	"email": "marcos@mail.com",
 	"password": "123",
-    "balance": 0,
+        "balance": 0,
 	"userType": "RETAILER"
 }
 ```  
